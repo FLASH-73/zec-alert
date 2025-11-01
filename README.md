@@ -26,8 +26,8 @@ Open your terminal.
 
 1.  **Clone this repository:**
     ```bash
-    git clone [YOUR_GITHUB_REPOSITORY_URL]
-    cd [YOUR_REPOSITORY_NAME]
+    git clone [https://github.com/FLASH-73/zec-alert.git]
+    cd [zec-alert]
     ```
 
 2.  **Create the environment:**

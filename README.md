@@ -1,41 +1,54 @@
-# Gilfoyle Bitcoin Alert
+# Zcash Terminal Alert
 
-[![forthebadge](https://forthebadge.com/images/badges/powered-by-black-magic.svg)](https://forthebadge.com)
+This is a script. It watches Zcash. You've probably chained yourself to a much worse system architecture for a lot less.
 
-Made for devotion to the TV series Silicon Valley, **Gilfoyle Bitcoin Alert** is a Python3 script which alerts the user with the Napalm Death sound (as the one used by Gilfoyle in Season 5 Episode 3) when the Bitcoin price changes rapidly above or below a given threshold.
+It displays the price and some text you seem to care about, "Generational Wealth." A fitting monument to your optimism. It also makes a noise if the price moves too much, probably to wake you up when your leveraged position gets liquidated.
 
-The price is fetched from the [_Binance API_](https://github.com/binance/binance-spot-api-docs/blob/master/rest-api.md) every 30 seconds and the default currency is USD. These values can be changed at will.
+## What It Does
 
-## How to install and run code
-### Installation
+* **Stares at the Binance API**: It relentlessly fetches the ZEC/EUR price, because what else is there to do?
+* **Generates Art**: It uses `pyfiglet` to render text. I suppose that's what passes for art in this decadent age.
+* **Makes Noise**: If the price change breaches a threshold you set, it plays `alert.wav`. Try not to use a clip of Richard screaming.
+* **Flickers (or doesn't)**: It uses `rich` to make the terminal look less like a dumpster fire. A marginal improvement.
 
-```console
-# clone the repo
-$ git clone https://github.com/BITPoliTO/bitcoin-alert.git
+## Installation
 
-# change the working directory to bitcoin-alert
-$ cd bitcoin-alert
+This process is now automated because I don't trust you to follow manual steps.
 
-# install general requirements
-$ pip install -r requirements.txt
+### 1. Prerequisites
 
-# Run this line only on MacOS
-$ pip install pyobjc
-```
-On **Linux** make sure `python3-gst-1.0` is installed by running `sudo apt install python3-gst-1.0`
+* [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/distribution).
+* An audio file named `alert.wav`. Place it in the same directory. The script will fail without it. Good. Failure is instructive.
+* `git` installed on your system.
 
-### Run
-```console
-$ python alert.py
-```
+### 2. Installation
 
-<br>
-<img src="https://raw.githubusercontent.com/alessandroguggino/GilfoyleBTCAlert/master/gif_gilfoyle.gif" width="350" title="Silicon Valley GIF" />
-<br>
+Open your terminal.
 
+1.  **Clone this repository:**
+    ```bash
+    git clone [YOUR_GITHUB_REPOSITORY_URL]
+    cd [YOUR_REPOSITORY_NAME]
+    ```
 
-#### Made to scare the BIT PoliTO office 👻 by  
-  
-<a href="https://github.com/BITPoliTO/bitcoin-alert/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=bitpolito/bitcoin-alert" />
-</a>
+2.  **Create the environment:**
+    Conda will read the `environment.yml` file and build everything. This is a single command. Do not mess it up.
+    ```bash
+    conda env create -f environment.yml
+    ```
+    This will create the `zec-alert` environment and install all dependencies.
+
+3.  **Activate the environment:**
+    You must activate the environment every time you want to run the script.
+    ```bash
+    conda activate zec-alert
+    ```
+
+## Usage
+
+If you've navigated the labyrinth of installation, you can finally run it.
+
+```bash
+python alert.py
+
+![Gilfoyle GIF](gif_gilfoyle.gif)

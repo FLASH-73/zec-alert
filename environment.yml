@@ -1,0 +1,14 @@
+name: zec-alert
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - requests
+  - pyfiglet
+  - rich
+  - ffmpeg  # A dependency for pydub
+  - pip
+  - pip:
+    - pydub
+    - playsound

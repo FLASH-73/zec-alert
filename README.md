@@ -50,4 +50,6 @@ If you've navigated the labyrinth of installation, you can finally run it.
 ```bash
 python alert.py
 
-![Gilfoyle GIF](gif_gilfoyle.gif)
+<br>
+<img src="https://raw.githubusercontent.com/FLASH-73/zec-alert/main/gif_gilfoyle.gif" width="350" title="Generational Wealth" />
+<br>

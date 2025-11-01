@@ -18,7 +18,6 @@ This process is now automated because I don't trust you to follow manual steps.
 ### 1. Prerequisites
 
 * [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/distribution).
-* An audio file named `alert.wav`. Place it in the same directory. The script will fail without it. Good. Failure is instructive.
 * `git` installed on your system.
 
 ### 2. Installation
